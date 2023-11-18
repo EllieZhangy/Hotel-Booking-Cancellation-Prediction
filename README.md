@@ -29,5 +29,6 @@ Our analysis resulted in the segmentation of customers into **four distinct grou
  - Self-driving Enthusiasts: Require parking spaces.
  - Group Travel Aficionados: Favor traveling in groups.
  - Loyal Guests: Tend to be repeat visitors.
+
 The geographical distribution of these customer groups can be seen in the following chart:
 <img width="753" alt="Screen Shot 2023-11-17 at 10 40 39 PM" src="https://github.com/EllieZhangy/Hotel-Booking-Cancellation-Prediction/assets/133906690/f5995b04-c715-4f51-bb54-ecbf5929292c">
