@@ -8,11 +8,11 @@ Hotel Booking Demand Datasets: Nuno Antonio, Ana Almeida, Luis Nunes, Data in Br
 https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand?datasetId=511638&sortBy=voteCount
 
 ## Techniques Used
- - Exploratory Data Analysis (EDA): This would involve looking at the distribution of the data, identifying any missing values, and visualizing the relationships between features using plots such as scatterplots and histograms.
- - Upsampling and SMOTE (which are used to address data imbalance problems)
- - Time series analysis: identify trends in booking demand or cancellation over time, such as seasonal patterns and fluctuations.
- - Clustering: K-Means & DBSCAN
- - Predictive modeling(Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.): forecast future bookings or cancellations based on past data.
+ - **Exploratory Data Analysis (EDA)**: This would involve looking at the distribution of the data, identifying any missing values, and visualizing the relationships between features using plots such as scatterplots and histograms.
+ - **Upsampling and SMOTE**: to address the data imbalance problems
+ - **Time Series Analysis**: identify trends in booking demand or cancellation over time, such as seasonal patterns and fluctuations.
+ - **Clustering (K-Means & DBSCAN)**: for customers segmentation
+ - **Predictive Modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.)**: forecast future bookings or cancellations based on past data.
 
 ## Result
 ### Classification:
