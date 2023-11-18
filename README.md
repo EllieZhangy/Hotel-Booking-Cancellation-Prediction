@@ -12,7 +12,7 @@ https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand?datasetId=511
  - **Upsampling and SMOTE**: to address the data imbalance problems
  - **Time Series Analysis**: identify trends in booking demand or cancellation over time, such as seasonal patterns and fluctuations.
  - **Clustering (K-Means & DBSCAN)**: for customers segmentation
- - **Predictive Modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.)**: forecast future bookings or cancellations based on past data.
+ - **Predictive Modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.)**: forecast future bookings or cancellations based on past data. We also utilized **K-fold Cross Validation** to enhance performance and avoid overfitting problems.
 
 ## Result
 ### Classification:
