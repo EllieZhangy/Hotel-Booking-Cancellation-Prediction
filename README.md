@@ -1,34 +1,73 @@
-# Hotel-Booking-Cancellation-Prediction
-This project will mainly focus on leveraging data mining techniques to conduct exploratory data analysis (EDA) of bookings to address the business needs of customers and also build models to predict whether a booking will be canceled.
+# Hotel Booking Cancellation Prediction
 
-**(More details in the Code.ipynb and Presentation.pdf file)**
+> **Archived learning project (2023).** This repository remains public as part of my applied data-science foundations. For current AI product and research work, see the selected projects at the bottom of this page.
 
-## Data Source
-Hotel Booking Demand Datasets: Nuno Antonio, Ana Almeida, Luis Nunes, Data in Brief, 2019
-https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand?datasetId=511638&sortBy=voteCount
+`EDA` · `Classification` · `XGBoost` · `Clustering` · `Time Series` · `Business Analytics`
 
-## Techniques Used
- - **Exploratory Data Analysis (EDA)**: This would involve looking at the distribution of the data, identifying any missing values, and visualizing the relationships between features using plots such as scatterplots and histograms.
- - **Upsampling and SMOTE**: to address the data imbalance problems
- - **Time Series Analysis**: identify trends in booking demand or cancellation over time, such as seasonal patterns and fluctuations.
- - **Clustering (K-Means & DBSCAN)**: for customers segmentation
- - **Predictive Modeling (Logistic Regression, Decision Tree, Random Forest, XGBoost, etc.)**: forecast future bookings or cancellations based on past data. We also utilized **K-fold Cross Validation** to enhance performance and avoid overfitting problems.
+This project combines exploratory analysis, cancellation prediction, customer segmentation, and time-based demand analysis to study hotel booking behavior. The central modeling task is to identify reservations at higher risk of cancellation while preserving enough recall to support proactive operational planning.
 
-## Result
-### Classification:
-Our models' performance can be seen as follows:
-<img width="1119" alt="Screen Shot 2023-11-17 at 10 37 44 PM" src="https://github.com/EllieZhangy/Hotel-Booking-Cancellation-Prediction/assets/133906690/aa0e02ef-7e26-4513-b873-8e363616a23d">
-In this project, our primary focus was on the **recall rate**. Based on the data presented in the table, we selected **XGBoost** as our final model. Notable features influencing this decision include:
- - Requirement for Parking Spaces (Yes/No)
- - History of Previous Cancellations (Yes/No)
- - Market Segment Category
+## Project scope
 
-### Customer Segmentation:
-Our analysis resulted in the segmentation of customers into **four distinct groups**:
- - Business Travellers: Prefer city hotels.
- - Self-driving Enthusiasts: Require parking spaces.
- - Group Travel Aficionados: Favor traveling in groups.
- - Loyal Guests: Tend to be repeat visitors.
+| Analysis track | Methods |
+| --- | --- |
+| **Exploratory analysis** | Missing-value review, distributions, relationships, and business-oriented visualizations |
+| **Class imbalance** | Upsampling and SMOTE |
+| **Cancellation prediction** | Logistic regression, decision tree, random forest, XGBoost, and other candidate models |
+| **Model validation** | K-fold cross-validation with emphasis on recall |
+| **Customer segmentation** | K-Means and DBSCAN |
+| **Demand patterns** | Time-series exploration of booking and cancellation behavior |
 
-The geographical distribution of these customer groups can be seen in the following chart:
-<img width="753" alt="Screen Shot 2023-11-17 at 10 40 39 PM" src="https://github.com/EllieZhangy/Hotel-Booking-Cancellation-Prediction/assets/133906690/f5995b04-c715-4f51-bb54-ecbf5929292c">
+## Data
+
+The project uses the public **Hotel Booking Demand** dataset described by Nuno António, Ana de Almeida, and Luís Nunes in *Data in Brief* (2019).
+
+## Classification result
+
+The model comparison emphasizes **recall**, because missing a likely cancellation can be operationally costly. XGBoost was selected as the final candidate in the original analysis.
+
+<p align="center">
+  <img width="1050" alt="Hotel cancellation model performance comparison" src="https://github.com/EllieZhangy/Hotel-Booking-Cancellation-Prediction/assets/133906690/aa0e02ef-7e26-4513-b873-8e363616a23d" />
+</p>
+
+Features highlighted in the original analysis include:
+
+- Whether a parking space was required.
+- Whether the guest had previously canceled.
+- Market-segment category.
+
+These relationships are descriptive within this dataset and should not be interpreted as causal conclusions.
+
+## Customer segmentation
+
+The clustering analysis produced four interpretable groups in the project narrative:
+
+1. **Business travelers** — stronger preference for city hotels.
+2. **Self-driving guests** — more likely to require parking.
+3. **Group travelers** — larger party-oriented bookings.
+4. **Loyal guests** — more repeat-visitor behavior.
+
+<p align="center">
+  <img width="780" alt="Geographic distribution of hotel customer segments" src="https://github.com/EllieZhangy/Hotel-Booking-Cancellation-Prediction/assets/133906690/f5995b04-c715-4f51-bb54-ecbf5929292c" />
+</p>
+
+## Repository guide
+
+- `Code.ipynb` contains the main analysis and modeling workflow.
+- `Presentation.pdf` contains the project summary and visual results.
+
+Because this is an older coursework project, package versions and notebook runtimes may require updates before reproduction.
+
+## Limitations
+
+- Cancellation behavior varies by property, geography, channel, and time period; results may not generalize beyond the source data.
+- SMOTE and upsampling should be applied inside the training folds to avoid leakage.
+- Segment labels are interpretive summaries, not verified customer identities.
+- A production system would require probability calibration, cost-sensitive thresholds, monitoring, drift checks, and review of operational consequences.
+- Predictions should support—not automatically replace—human revenue-management and guest-service decisions.
+
+## Selected work
+
+- [AI Driving School](https://elliezhangy.github.io/ai-driving-school/) — a voice- and text-controlled Chinese parking game.
+- [Daily Mood Screen](https://github.com/EllieZhangy/Daily-Mood-Screen) — a personalized macOS wallpaper pipeline using weather, photos, and mood.
+- [Memory Studio](https://github.com/EllieZhangy/my-ai-poster-skills) — a photo-to-poster web app with reusable visual styles.
+- [Radiology Impression Prediction](https://github.com/EllieZhangy/LLM-Based-Impression-Prediction-from-Radiology-Reports) — an LLM research project for radiology report impression generation.
